@@ -21,7 +21,7 @@ function Signup() {
           if (res.data == "exist") {
             alert("User already exists");
           } else if (res.data == "notexist") {
-            history("/home", { state: { id: email } });
+            history("/", { state: { id: email } });
           }
         })
         .catch((e) => {
@@ -67,7 +67,7 @@ function Signup() {
             </div>
             <p className="text mt-3">
               Already have an account?
-              <Link to="/" className="text-blue-300">
+              <Link to="/login" className="text-blue-300">
                 &nbsp;LogIn
               </Link>
             </p>

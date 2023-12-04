@@ -18,7 +18,7 @@ function Login() {
         })
         .then((res) => {
           if (res.data == "exist") {
-            history("/home", { state: { id: email } });
+            history("/", { state: { id: email } });
           } else if (res.data == "notexist") {
             alert("User not found");
           }
